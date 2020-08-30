@@ -79,6 +79,7 @@ type Abilities []struct {
 	Slot     int  `json:"slot"`
 }
 
+
 //functions for templates and frontend
 func homepage(writer http.ResponseWriter, request *http.Request) {
 	if request.FormValue("pokemon_selected") != "" {

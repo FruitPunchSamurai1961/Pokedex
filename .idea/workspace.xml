@@ -28,6 +28,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
@@ -38,16 +41,18 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shesh\GoProjects\Pokedex" />
+      <recent name="C:\Users\shesh\GoProjects\Pokedex\pokedex" />
       <recent name="C:\Users\shesh\GoProjects\Pokedex\Pokedex" />
       <recent name="C:\Users\shesh\GoProjects\Pokedex\template" />
       <recent name="C:\Users\shesh\GoProjects\Pokedex\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build Pokedex.go">
+  <component name="RunManager" selected="Go Build.go build pokedex.go">
     <configuration name="go build Pokedex.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Pokedex" />
       <working_directory value="$PROJECT_DIR$" />
@@ -64,6 +69,14 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build pokedex.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Pokedex" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/pokedex/pokedex.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="detailedPokemon.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Pokedex/template/detailedPokemon.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -72,6 +85,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build pokedex.go" />
         <item itemvalue="Go Build.go build Pokedex.go" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="JavaScript Debug.listPokemon.html" />
@@ -101,25 +115,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="353" key="#Go_Modules/0.0.1920.1040@0.0.1920.1040" timestamp="1598802200018" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1598803023198">
+    <state x="1033" y="325" key="FileChooserDialogImpl" timestamp="1598804275407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598803023198" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1598803023198">
+    <state x="1033" y="325" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598804275407" />
+    <state width="938" height="282" key="GridCell.Tab.0.bottom" timestamp="1598804522408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598803023198" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1598803023198">
+    <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598804522408" />
+    <state width="938" height="282" key="GridCell.Tab.0.center" timestamp="1598804522406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598803023198" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1598803023198">
+    <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598804522406" />
+    <state width="938" height="282" key="GridCell.Tab.0.left" timestamp="1598804522405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598803023198" />
-    <state x="754" y="215" key="SettingsEditor" timestamp="1598802825463">
+    <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598804522405" />
+    <state width="938" height="282" key="GridCell.Tab.0.right" timestamp="1598804522406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="754" y="215" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598802825463" />
+    <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598804522406" />
+    <state x="754" y="215" key="SettingsEditor" timestamp="1598804314140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="754" y="215" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598804314140" />
   </component>
 </project>
