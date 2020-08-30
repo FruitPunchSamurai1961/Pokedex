@@ -1,1 +1,1 @@
-web: Pokedex
+web: main
