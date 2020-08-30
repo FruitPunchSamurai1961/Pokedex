@@ -1,0 +1,16 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/10/b2/7d/10b27d33cb1d1b69e9db7384e3a7e9bd.png");
+}
+
+#progressbar {
+    background-color: black;
+    border-radius: 13px;
+    /* (height of inner div) / 2 + padding */
+    padding: 3px;
+}
+
+#progressbar>div {
+    background-color: orange;
+    height: 20px;
+    border-radius: 10px;
+}

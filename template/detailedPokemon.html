@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/detailStyleSheet.css">
+    <title>Pokedex</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Pokedex</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/list/1">List Of Pokemon<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="card-deck mt-3">
+    <div class="card text-center bg-info border-info" style="width: 18rem;">
+        <img class="card-img-top" src="{{.ImageFront}}" alt="{{.Name}}">
+        <div class="card-body">
+            <h5 class="card-title">{{.Name}}</h5>
+            <p class="card-text">{{.Description}}</p>
+        </div>
+    </div>
+    <div class="card text-center bg-secondary border-secondary" style="width: 18rem;">
+        <img class="card-img-top" src="{{.ImageShiny}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Abilities</h5>
+            <ul class="list-group">
+                {{range .Abilities}}
+                    <li class="list-group-item mb-3">{{.Name}}</li>
+                {{end}}
+            </ul>
+        </div>
+    </div>
+    <div class="card text-center bg-dark border-dark" style="width: 18rem;">
+        <img class="card-img-top" src="{{.ImageBack}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Type</h5>
+            <ul class="list-group">
+                {{range .Types}}
+                    <li class="list-group-item mb-3">{{.Type}}</li>
+                {{end}}
+            </ul>
+        </div>
+    </div>
+    <div class="card text-center bg-warning border-warning" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Stats</h5>
+            <div class="mb-3">
+                <strong>HP:</strong>
+                <strong>{{.Stats.HP}}</strong>
+                
+                    <div id="progressbar">
+                        <div style="width: {{.Stats.HP}}%"></div>
+                    </div>
+                
+            </div>
+            <div class="mb-3">
+                <strong>Attack:</strong>
+                <strong>{{.Stats.Attack}}</strong>
+                
+                    <div id="progressbar">
+                        <div style="width: {{.Stats.Attack}}%"></div>
+                    </div>
+                
+            </div>
+            <div class="mb-3">
+                <strong>Defense:</strong>
+                <strong>{{.Stats.Defense}}</strong>
+                
+                    <div id="progressbar">
+                        <div style="width: {{.Stats.Defense}}%"></div>
+                    </div>
+                
+            </div>
+            <div class="mb-3">
+                <strong>Special Attack:</strong>
+                <strong>{{.Stats.Special_Attack}}</strong>
+                
+                    <div id="progressbar">
+                        <div style="width: {{.Stats.Special_Attack}}%"></div>
+                    </div>
+                
+            </div>
+            <div class="mb-3">
+                <strong>Special Defense:</strong>
+                <strong>{{.Stats.Special_Defense}}</strong>
+                
+                    <div id="progressbar">
+                        <div style="width: {{.Stats.Special_Defense}}%"></div>
+                    </div>
+            </div>
+            <div class="mb-3">
+                <strong>Speed:</strong>
+                <strong>{{.Stats.Speed}}</strong>
+                
+                    <div id="progressbar">
+                        <div style="width: {{.Stats.Speed}}%"></div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Pokedex</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            let availableTags = [];
+            {{range .}}
+            availableTags.push({{.}})
+            {{end}}
+            $("#pokemon_name").autocomplete({
+                source: availableTags,
+                appendTo: '#pokemon_input',
+                select: function (event, ui) {
+                    if (ui.item) {
+                        $("#pokemon_name").val(ui.item.value);
+                    }
+                    $(".form-inline").submit();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pokedex</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/list/1">List Of Pokemon<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div>
+    <h1 id="title">Pok&eacute;dex</h1>
+    <form class="form-inline" method="post">
+        <div class="form-group mx-sm-3 mb-2" id="pokemon_input">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input class="form-control" id="pokemon_name" placeholder="Pokemon Name" name="pokemon_selected">
+        </div>
+    </form>
+</div>
+</body>
+</html>

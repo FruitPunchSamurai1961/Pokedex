@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/originals/10/b2/7d/10b27d33cb1d1b69e9db7384e3a7e9bd.png");
+        }
+    </style>
+    <title>Pokedex</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Pokedex</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#" id="previous"><strong>Previous</strong><span
+                        class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#" id="next"><strong>Next</strong><span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+</nav>
+<div class="row">
+    {{range .}}
+        <div class="card text-center bg-info border-info ml-3 mb-3 mr-3 mt-3" style="width: 18rem;">
+            <img class="card-img-top" src="{{.Image}}" alt="{{.Name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{.Name}}</h5>
+                <p class="card-text">{{.Description}}</p>
+            </div>
+        </div>
+    {{end}}
+</div>
+<nav class="navbar bottom navbar-light bg-light">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#" id="previous_bottom"><strong>Previous</strong><span
+                        class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#" id="next_bottom"><strong>Next</strong><span
+                        class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+</nav>
+</body>
+<script type="text/javascript">
+    const url = window.location.href;
+    const id = url.substring(url.lastIndexOf('/') + 1);
+    const prevNum = parseInt(id) - 1;
+    const nextNum = parseInt(id) + 1;
+    //get all the ids
+    const prevTop = document.getElementById("previous");
+    const nextTop = document.getElementById("next");
+    const prevBottom = document.getElementById("previous_bottom");
+    const nextBottom = document.getElementById("next_bottom");
+    if (prevNum < 1) {
+        prevTop.setAttribute('href', "/list/1")
+        prevBottom.setAttribute('href', "/list/1")
+    } else {
+        prevTop.setAttribute('href', "/list/" + prevNum)
+        prevBottom.setAttribute('href', "/list/" + prevNum)
+    }
+    if (nextNum > 53) {
+        nextTop.setAttribute('href', "/list/53")
+        nextBottom.setAttribute('href', "/list/53")
+    } else {
+        nextTop.setAttribute('href', "/list/" + nextNum)
+        nextBottom.setAttribute('href', "/list/" + nextNum)
+    }
+
+</script>
+</html>

@@ -1,0 +1,46 @@
+body {
+    background-image: url("https://cdn.wallpapersafari.com/15/62/CGzOkf.png");
+}
+
+#title {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+ul.ui-autocomplete {
+    list-style: none;
+}
+
+* html .ui-autocomplete {
+    height: 100px;
+}
+
+.ui-autocomplete{
+    left:-70px !important;
+    width:305px !important;
+}
+
+#pokemon_input {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    margin-top: -50px;
+    width: 300px;
+    padding-right: 30px;
+}
