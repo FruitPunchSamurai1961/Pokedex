@@ -1,1 +1,1 @@
-web: pokedex
+web: Pokedex
