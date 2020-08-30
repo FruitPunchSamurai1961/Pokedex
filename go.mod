@@ -1,4 +1,4 @@
-module github.com/sheshan1781/Pokedex
+module github.com/sheshan1961
 
 go 1.14
 
