@@ -5,7 +5,9 @@ import (
 	"github.com/mtslzr/pokeapi-go"
 	_ "github.com/mtslzr/pokeapi-go"
 	"html/template"
+	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -78,7 +80,6 @@ type Abilities []struct {
 	IsHidden bool `json:"is_hidden"`
 	Slot     int  `json:"slot"`
 }
-
 
 //functions for templates and frontend
 func homepage(writer http.ResponseWriter, request *http.Request) {
@@ -223,6 +224,6 @@ func main() {
 	//Handle Static Files
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("template/static"))))
 
-	http.Handle("/", r)
-	_ = http.ListenAndServe(":80", r)
+	port := ":" + os.Getenv("PORT")
+	log.Fatal(http.ListenAndServe(port, r))
 }
