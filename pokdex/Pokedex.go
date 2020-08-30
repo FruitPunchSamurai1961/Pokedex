@@ -1,4 +1,4 @@
-package main
+package pokdex
 
 import (
 	"github.com/gorilla/mux"
