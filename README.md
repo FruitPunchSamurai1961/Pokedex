@@ -6,4 +6,5 @@
 
 
 ##Improvement to Make
-One thing I'd like to add once I get some more time would be to add types of berries, and potentially another page where the user cna select a Pokemon and battle against the computer.
+
+One thing I'd like to add once I get some more time would be to add types of berries, and potentially another page where the user can select a Pokemon and battle against the computer.
