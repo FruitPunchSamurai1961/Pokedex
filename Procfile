@@ -1,1 +1,1 @@
-web: pokdex
+web: Pokdex

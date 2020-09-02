@@ -13,9 +13,9 @@ import (
 )
 
 //templates
-var tmpl = template.Must(template.ParseFiles("template/home.html"))
 var detailedtmpl = template.Must(template.ParseFiles("template/detailedPokemon.html"))
 var listtmp = template.Must(template.ParseFiles("template/listPokemon.html"))
+var tmpl = template.Must(template.ParseFiles("template/home.html"))
 
 //pokemon names
 var pokemonNames = getNames()
